@@ -1,0 +1,31 @@
+type Query {
+    getKeepWatchingList(
+        user_id: ID!
+        limit: Int
+        offset: Int
+        sort: String
+    ): [KeepWatchingList!]!
+}
+
+type Mutation {
+    addKeepWatchingList(
+        user_id: ID!
+        _id: ID!
+        season: Int!
+        episode: Int!
+    ): Boolean!
+    updateKeepWatchingList(
+        user_id: ID!
+        _id: ID!
+        season: Int!
+        episode: Int!
+    ): Boolean!
+    removeKeepWatchingList(user_id: ID!, _id: ID!): Boolean!
+}
+
+type KeepWatchingList {
+    _id: ID!
+    season: Int!
+    episode: Int!
+    info: Data!
+}

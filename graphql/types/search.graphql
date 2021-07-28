@@ -1,0 +1,8 @@
+type Query {
+    search(imdbId: String!): Search!
+}
+
+type Search {
+    title: String!
+    poster: String!
+}

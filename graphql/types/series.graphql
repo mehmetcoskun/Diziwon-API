@@ -1,0 +1,32 @@
+type Query {
+    series(id: ID!): Series!
+}
+
+type Series {
+    id: ID!
+    imdb_id: String!
+    type: String!
+    title: String!
+    original_title: String
+    poster: String!
+    backdrop: String!
+    backdrop_withtitle: String!
+    genres: String!
+    summary: String!
+    year: String!
+    imdb_rating: String!
+    maturity: String
+    runtime: String
+    counter: String
+    watch: [SeriesWatch]
+}
+
+type SeriesWatch {
+    link_subtitle: String
+    link_dugging: String
+    season: Int
+    episode: String
+    name: String
+    overview: String
+    still_path: String
+}

@@ -1,0 +1,19 @@
+type Mutation {
+    request(data: RequestInput!): Boolean!
+    addMovie(data: AddMovieInput!): Boolean!
+    updateMovie(data: UpdateMovieInput!): Boolean!
+}
+
+input RequestInput {
+    title: String!
+    user_id: ID!
+}
+
+input AddMovieInput {
+    imdbId: String!
+    user_id: ID!
+}
+
+input UpdateMovieInput {
+    imdbId: String!
+}

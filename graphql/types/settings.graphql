@@ -1,0 +1,17 @@
+type Query {
+    Settings: Settings!
+}
+
+type Settings {
+    app_name: String!
+    app_version: String!
+    assets_url: String!
+    share_app_text: String!
+    download_url: String!
+    download_ref_url: String!
+    share_text: String!
+    password_reset_url: String!
+    user_account_url: String!
+    help_url: String!
+    useragent: String!
+}

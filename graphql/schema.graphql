@@ -1,0 +1,27 @@
+# import Query from './types/settings.graphql'
+
+# import Query from './types/datas.graphql'
+# import Mutation from './types/datas.graphql'
+
+# import Query from './types/movie.graphql'
+
+# import Query from './types/series.graphql'
+
+# import Query from './types/token.graphql'
+
+# import Query from './types/user.graphql'
+# import Mutation from './types/user.graphql'
+
+# import Query from './types/avatar.graphql'
+
+# import Query from './types/watchlist.graphql'
+# import Mutation from './types/watchlist.graphql'
+
+# import Query from './types/keepwatchinglist.graphql'
+# import Mutation from './types/keepwatchinglist.graphql'
+
+# import Mutation from './types/request.graphql'
+
+# import Query from './types/search.graphql'
+
+# import Query from './types/upcoming.graphql'

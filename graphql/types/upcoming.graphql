@@ -1,0 +1,11 @@
+type Query {
+    getUpcomings: [Upcoming]!
+}
+
+type Upcoming {
+    title: String!
+    original_title: String!
+    backdrop_path: String!
+    overview: String!
+    release_date: String!
+}

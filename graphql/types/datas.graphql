@@ -1,0 +1,34 @@
+type Query {
+    datas(
+        sort: String
+        limit: Int
+        offset: Int
+        featured: String
+        sortByType: String
+        random: Boolean
+        search: String
+        genre: String
+    ): [Data!]!
+}
+
+type Data {
+    id: ID!
+    imdb_id: String!
+    type: String!
+    title: String!
+    original_title: String
+    poster: String!
+    backdrop: String!
+    backdrop_withtitle: String!
+    genres: String!
+    summary: String!
+    year: String!
+    imdb_rating: String!
+    maturity: String
+    runtime: String
+    counter: String
+}
+
+type Mutation {
+    incrementCounter(id: ID!): Boolean
+}

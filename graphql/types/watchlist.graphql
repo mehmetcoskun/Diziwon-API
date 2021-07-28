@@ -1,0 +1,27 @@
+type Query {
+    getWatchList(data: ControlWatchListInput!): [WatchList!]!
+    controlWatchList(data: WatchListInput!): Boolean
+}
+
+type WatchList {
+    _id: ID!
+    user_id: ID!
+    info: Data!
+}
+
+type Mutation {
+    addWatchList(data: WatchListInput!): Boolean
+    removeWatchList(data: WatchListInput!): Boolean
+}
+
+input WatchListInput {
+    _id: ID!
+    user_id: ID!
+}
+
+input ControlWatchListInput {
+    user_id: ID!
+    limit: Int
+    offset: Int
+    sort: String
+}

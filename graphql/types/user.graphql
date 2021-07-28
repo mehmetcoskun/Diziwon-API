@@ -1,0 +1,62 @@
+type Query {
+    getUsers(sort: String, limit: Int, offset: Int): [User!]!
+    getUserDetail(id: ID!): User!
+    getUser(token: String!): User!
+}
+
+type User {
+    id: ID!
+    avatar: String!
+    full_name: String!
+    email: String!
+    authority: String!
+    status: String!
+    last_active: String!
+    device_brand: String!
+    device_model: String!
+    device_os_version: String!
+    app_version: String!
+    ref_download: Int!
+    createdAt: String!
+    watchlist: [WatchList!]!
+}
+
+type Mutation {
+    login(data: LoginUserInput!): Token!
+    register(data: RegisterUserInput!): Boolean!
+    updateUser(data: UpdateUserDataInput!): User
+    setUserStatus(id: ID!, status: String!): Boolean!
+    deleteUser(id: ID!): Boolean!
+}
+
+input LoginUserInput {
+    email: String!
+    password: String!
+    device_brand: String
+    device_model: String
+    device_os_version: String
+    app_version: String
+}
+
+input RegisterUserInput {
+    avatar: String!
+    full_name: String!
+    email: String!
+    password: String!
+    last_active: String!
+    device_brand: String
+    device_model: String
+    device_os_version: String
+    app_version: String
+}
+
+input UpdateUserDataInput {
+    id: ID!
+    avatar: String
+    full_name: String
+    last_active: String
+    device_brand: String
+    device_model: String
+    device_os_version: String
+    app_version: String
+}

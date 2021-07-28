@@ -1,0 +1,8 @@
+type Query {
+    avatars: [Avatar!]!
+}
+
+type Avatar {
+    uri: String!
+    avatar_group: String!
+}

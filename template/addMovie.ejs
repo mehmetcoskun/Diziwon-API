@@ -1,0 +1,22 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+</head>
+<body>
+    <h4>Yeni Film Eklendi</h4>
+    <img src="<%= poster %>" width="240" height="360"/>
+    <h5>Filmin Adı: <%= title %></h5>
+    <h5>IMDb ID: <%= imdbId %></h5>
+    <% if (link_subtitle) { %>
+        <h5>Altyazı: <%= link_subtitle %><a href="<%= link_subtitle %>"></a></h5>
+    <% } %>
+    <% if (link_dugging) { %>
+        <h5>Dublaj: <%= link_dugging %><a href="<%= link_dugging %>"></a></h5>
+    <% } %>
+    <h5>Ekleyen Kişi: (<%= user_id_added_by %>) <%= added_by %></h5>
+</body>
+</html>
