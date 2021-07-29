@@ -202,6 +202,18 @@ const Query = {
             offset: args.offset ? args.offset : null,
         });
     },
+    controlKeepWatchingList: async (parent, args, { KeepWatchingList }) => {
+        return (await KeepWatchingList.findOne({
+            where: {
+                user_id: args.user_id,
+                _id: args._id,
+                season: args.season,
+                episode: args.episode,
+            },
+        }))
+            ? true
+            : false;
+    },
 };
 
 module.exports = Query;
