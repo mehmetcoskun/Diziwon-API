@@ -207,8 +207,6 @@ const Query = {
             where: {
                 user_id: args.user_id,
                 _id: args._id,
-                season: args.season,
-                episode: args.episode,
             },
         }))
             ? true
