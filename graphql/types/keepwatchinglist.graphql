@@ -8,8 +8,6 @@ type Query {
     controlKeepWatchingList(
         user_id: ID!
         _id: ID!
-        season: Int!
-        episode: Int!
     ): Boolean!
 }
 
