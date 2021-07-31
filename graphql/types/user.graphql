@@ -19,6 +19,7 @@ type User {
     ref_download: Int!
     createdAt: String!
     watchlist: [WatchList!]!
+    keepwatchinglist: [KeepWatchingList!]!
 }
 
 type Mutation {
