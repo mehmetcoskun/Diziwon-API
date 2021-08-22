@@ -94,13 +94,13 @@ const server = new ApolloServer({
         MAIL_TEMPLATE_ADD_MOVIE,
         MAIL_TEMPLATE_REQUEST,
     },
-    //introspection: true,
-    //playground: true,
+    introspection: true,
+    playground: true,
 });
 
-server.applyMiddleware({ app });
+//server.applyMiddleware({ app });
 
-/*
+
 server.applyMiddleware({
     app,
     path: '/graphql',
@@ -109,7 +109,7 @@ server.applyMiddleware({
         credentials: true,
     },
 });
-*/
+
 
 const port = process.env.PORT || 4000;
 
