@@ -3,7 +3,7 @@ type Query {
 }
 
 type Upcoming {
-    title: String!
+    title: String
     original_title: String!
     backdrop_path: String!
     overview: String!
