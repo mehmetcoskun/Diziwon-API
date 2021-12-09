@@ -201,10 +201,11 @@ module.exports = {
 
         return !!status;
     },
-    deleteUser: async (parent, args, { User, WatchList }) => {
+    deleteUser: async (parent, args, { User, WatchList, KeepWatchingList }) => {
         const user = await User.findOne({ where: { id: args.id } });
         
         WatchList.destroy({ where: { user_id: args.id } });
+        KeepWatchingList.destroy({ where: { user_id: args.id } });
 
         return !!user.destroy();
     },
